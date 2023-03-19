@@ -1,0 +1,48 @@
+.box{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to top, #000000,#2b124b,#000000);
+    overflow:hidden;
+  }
+   
+  .box:before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width: 100%;
+    height: 100%;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff,#45f3ff,#45f3ff);
+  z-index:1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  }
+
+
+
+  .blink-button san:nth-child(1){
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+}
+.blink-button san:nth-child(2){
+    top:0;
+    left:0;
+    width:2px;
+    height:100%;
+}
+.blink-button san:nth-child(3){
+    bottom:0;
+    left:0;
+    width:100%;
+    height:2px;
+}
+.blink-button san:nth-child(4){
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height:100%;
+}

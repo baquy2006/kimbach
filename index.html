@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        body{
+            min-height: 100vh;
+  
+  background-color: rgb(0, 0, 0);
+           background-repeat: no-repeat;
+          background-position:  center;
+          background-size: cover ;
+          display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  --rotate: 360deg;
+  --purple: #8b008b;
+  --danger: #dc143c;
+  position: relative;
+  z-index: 0;
+        }
+        .blink-button{
+            
+            background-color:#4159d000;
+            color: #4158d0;
+            display: inline-block;
+            padding: 15px 30px;
+            outline: none;
+            border: none; /* Không có đường viền */
+            padding: 10px 50px; /* Kích thước nút */
+            cursor: pointer; /* Con trỏ chuột thành hình bàn tay */
+             transition-duration: 0.5s; /* Thời gian chuyển đổi */
+         position:relative;
+         
+     
+        }
+        .blink-button span{
+            position:absolute;
+            background-color:#4158d0;
+            display: block;
+          
+        }
+
+        .blink-button span:nth-child(1){
+            top:0;
+            left:0;
+            width:100%;
+            height:2px;
+        }
+        .blink-button span:nth-child(2){
+            top:0;
+            left:0;
+            width:2px;
+            height:100%;
+        }
+        .blink-button span:nth-child(3){
+            bottom:0;
+            left:0;
+            width:100%;
+            height:2px;
+        }
+        .blink-button span:nth-child(4){
+            bottom: 0;
+            right: 0;
+            width: 2px;
+            height:100%;
+        }
+
+        .blink-button:before{
+            background-color:  #4159d0;
+            color:aliceblue;
+            border: none; /* Không có đường viền */
+            padding: 10px 50px; /* Kích thước nút */
+            cursor: pointer; /* Con trỏ chuột thành hình bàn tay */
+             transition-duration: 0.5s; /* Thời gian chuyển đổi */
+             transition: height 0.5s, width 1s ease-in-out 0.2s ;
+        }
+        .blink-button:hover:before{
+        background-color: #4158d0;
+       
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="button">
+        <button class="blink-button" onclick="openNewPage()">
+          <h1 class="blink-text">
+          <span></span><span></span><span></span><span></span>
+            Click Here!</h1>
+        </button>
+      </div>
+
+      <script>
+        function openNewPage() {
+            window.location.href = "index2.html"; // thay đổi đường dẫn của trang mới tại đây
+        }
+        </script>
+</body>
+</html>
